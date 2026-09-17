@@ -83,7 +83,7 @@ proxy-providers:
   provider1:
     type: http
     url: "url" # 填入订阅链接
-    interval: 0 # 订阅更新间隔，单位：秒
+    interval: 86400 # 订阅更新间隔，单位：秒
     path: ./proxy_provider/provider1.yaml
     proxy: DIRECT # 下载订阅时使用的策略
     # 在 Provider 层统一排除公告、流量、到期等非节点条目，避免各策略组重复配置
@@ -92,7 +92,7 @@ proxy-providers:
     health-check:
       enable: true
       url: https://cp.cloudflare.com/generate_204
-      interval: 28800
+      interval: 86400
       timeout: 5000
       lazy: false
       expected-status: 204
